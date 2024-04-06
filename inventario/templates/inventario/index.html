@@ -1,0 +1,56 @@
+{% extends 'plantilla/indexBase.html' %}
+{% block content %}
+
+<br>
+<div class="container" >
+    <div class="row">
+      <div class="col-12">
+        <div id="graficas-contenedor" style="display: flex;">
+          <div class="card" style="width: 65%;">
+            <div class="card-body" >
+                  {{graficas | safe}}
+            </div>
+        </div>
+          <div class="card" style="width: 35%;">
+            <div class="card-body" >
+                   {{grafica2 | safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10"  id="tablas">
+            <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th   id= "tituloC" scope="col">#</th>
+                    <th  id= "tituloC"  scope="col">Marca</th>
+                    <th  id= "tituloC" scope="col">Modelo</th>
+                    <th  id= "tituloC"  scope="col">Precio</th>
+                    <th  id= "tituloC" scope="col">Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in Allcarros %}
+                <tr>
+                    <th style="font-size: small; font-weight: 210;" >{{ item.id }}</th>
+                    <td>{{ item.marca }}</td>
+                    <td>{{ item.modelo}}</td>
+                    <td><i class="fa-solid fa-sack-dollar" style="color:rgb(57, 57, 57)"></i>  {{ item.precio}}</td>
+                   
+                    <td>{{ item.colorCarro}}</td>
+                </tr>
+                {% endfor %}
+        
+            </tbody>
+        </table>
+        
+    </div>
+    <div class="col-1"></div>
+</div>
+
+{% endblock %}

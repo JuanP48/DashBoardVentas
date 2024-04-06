@@ -1,0 +1,52 @@
+body{
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 210;
+  font-style: normal;
+  color: rgb(57, 57, 57);
+}
+#tituloC{
+    
+    font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 281;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#row12{
+    margin-top: 30px;  
+}
+
+#btnU{
+    
+    text-transform: uppercase;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.2px solid rgb(57, 57, 57);
+    color: rgb(57, 57, 57);
+    border-radius: 2%;
+    letter-spacing: 1px;
+}
+#icon{
+   font-size:26px;
+   margin-bottom: 10px;
+}
+
+#btnU:hover{
+color: #e43d00;
+border-bottom: 0.2px solid #e43d00;
+font-weight: bolder;
+}
+
+
+
+
+

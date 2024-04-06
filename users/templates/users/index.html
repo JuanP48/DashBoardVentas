@@ -1,0 +1,59 @@
+{% extends 'plantilla/indexBase.html' %}
+{% block content %}
+
+<br>
+<div class="container" >
+    <div class="row">
+      <div class="col-12">
+        <div id="graficas-contenedor" style="display: flex;">
+          <div class="card" style="width: 50%;">
+            <div class="card-body" >
+                  {{graficaU | safe}}
+            </div>
+        </div>
+          <div class="card" style="width: 50%;">
+            <div class="card-body" >
+                   {{graficaG | safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10" id="tablas">
+            <table class="table">
+            <thead   class="table-dark" >
+                <tr >
+                    <th  id= "tituloC" scope="col">ID</th>
+                    <th id= "tituloC" scope="col" >Nombre</th>
+                    <th id= "tituloC" scope="col">Apellido</th>
+                    <th id= "tituloC" scope="col">Edad</th>
+                    <th id= "tituloC"  scope="col">Pais</th>
+                    <th  id= "tituloC" scope="col">Genero</th>
+                    <th id= "tituloC" scope="col">Barrio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in Alluser %}
+                <tr>
+                    <th style="font-size: small; font-weight: 210;">{{ item.id}}</th>
+                    <td>{{ item.nombre }}</td>
+                    <td>{{ item.apellido}}</td>
+                    <td>{{ item.edad}}</td>
+                    <td>{{ item.paisUser }}</td>
+                    <td>{{ item.gen}}</td>
+                    <td>{{ item.get_barrio_display}}</td>
+                </tr>
+                {% endfor %}
+        
+            </tbody>
+        </table>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+
+{% endblock %}
